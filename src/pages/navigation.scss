@@ -1,0 +1,13 @@
+.navigation {
+    background-color:#FC6571;
+    font-size: 20px;
+    color: #333;
+
+  button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+  cursor: pointer;
+  margin-left: 10px;  
+  }
+  .active { 
+    font-weight: bold; 
+}
+}
