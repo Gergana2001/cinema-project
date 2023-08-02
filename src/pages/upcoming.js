@@ -13,7 +13,7 @@ import Alert from "react-bootstrap/Alert";
 import "./popular.scss";
 import { colors } from "../colors";
 
-function Upcoming() {
+function UpcomingMovies() {
   const MAX_CLICKS = 3;
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
@@ -358,4 +358,4 @@ function Upcoming() {
   );
 }
 
-export default Upcoming;
+export default UpcomingMovies;

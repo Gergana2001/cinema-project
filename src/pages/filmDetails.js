@@ -3,13 +3,13 @@ import { Card, Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { colors } from "../colors";
-import "./everyFilm.scss";
+import "./filmDetails.scss";
 
 function FilmDetails() {
   const location = useLocation();
   const card = location.state.item;
   const [infoTrailer, setInfoTrailer] = useState([]);
-  const [actior, setActior] = useState([]);
+  const [actors, setActors] = useState([]);
 
   const goBack = () => {
     window.history.back();
@@ -29,7 +29,7 @@ function FilmDetails() {
     fetch(`https://api.themoviedb.org/3/movie/${id}/credits`, options)
       .then((response) => response.json())
       .then((response) => {
-        setActior(response.cast.slice(0, 6));
+        setActors(response.cast.slice(0, 6));
         console.log(response);
       })
       .catch((err) => console.error(err));
@@ -96,7 +96,7 @@ function FilmDetails() {
         </Card.Body>
       </Card>
       <div className="cards">
-        {actior.map((item) => (
+        {actors.map((item) => (
           <Card
             style={{ width: "300px", height: "400px", marginBottom: "15px" }}
             className="cardUp"

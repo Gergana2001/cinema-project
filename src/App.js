@@ -3,9 +3,9 @@ import "./App.css";
 import Footer from "./pages/footer";
 import PopularMovies from "./pages/popular";
 import Navigation from "./pages/navigation";
-import Upcoming from "./pages/upcoming";
+import UpcomingMovies from "./pages/upComing";
 import TopRatedMovies from "./pages/topRated";
-import FilmDetails from "./pages/everyFilm";
+import FilmDetails from "./pages/filmDetails";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PopularMovies />} />
           <Route path="/upcomingMovies/:id" element={<FilmDetails />} />
-          <Route path="/upcomingMovies" element={<Upcoming />} />
+          <Route path="/upcomingMovies" element={<UpcomingMovies />} />
           <Route path="/popular" element={<PopularMovies />} />
           <Route path="/popular/:id" element={<FilmDetails />} />
           <Route path="/topRated" element={<TopRatedMovies />} />
